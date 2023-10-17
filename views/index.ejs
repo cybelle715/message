@@ -1,0 +1,36 @@
+<!-- ejs -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ('./partials/globalHead') %>
+</head>
+
+<body>
+    <%- include ('./partials/header') %>
+
+        <main>
+            <div class="container">
+                <% messages.forEach(message=> { %>
+                    <div class="message-wrapper">
+                        <h2 class="message">
+                            <%= message.text %>
+                        </h2>
+                        <div class="message-author">
+                            <p>
+                                <%= message.user %>
+                            </p>
+                            <small>
+                                <%= message.added.toLocaleDateString() %> - <%= message.added.toLocaleTimeString() %>
+                            </small>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </main>
+        <%- include ('./partials/footer') %>
+</body>
+
+
+</html>

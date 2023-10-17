@@ -1,0 +1,120 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1rem 'Lucida Grande', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+main {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  width: min(1200px, 100%);
+}
+
+.message-wrapper {
+  margin-bottom: 16px;
+}
+
+.message {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  background-color: #fff;
+  min-height: 50px;
+}
+
+.message::before {
+  content: ' ';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 1;
+  bottom: -8px;
+  left: 12px;
+  border-radius: 0 0 5px 0;
+}
+
+.message::after {
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: -1;
+  bottom: -8px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+.message-author {
+  display: flex;
+  flex-direction: column;
+}
+
+small {
+  font-size: 0.7rem;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+textarea,
+input {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 8px;
+  outline: none;
+  transition: 0.3s ease-out outline;
+}
+
+textarea:focus,
+input:focus {
+  outline: 1px solid #444;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5f9df7;
+  color: white;
+  transition: 0.3s ease-out background;
+}
+
+button:hover {
+  background-color: #1746a2;
+}
